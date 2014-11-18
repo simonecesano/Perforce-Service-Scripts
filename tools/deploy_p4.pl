@@ -7,10 +7,7 @@ my $whoami = qx/whoami/; $whoami =~ s/\s$//;
 my $bin_dir = join '/', '/Users', $whoami, 'bin';
 print $bin_dir;
 
-unless (-d $bin_dir) {
-    mkdir $bin_dir 
-} 
-
+unless (-d $bin_dir) { mkdir $bin_dir } 
 my $p4_file = join '/', $bin_dir, 'p4';
 print $p4_file;
 
@@ -22,4 +19,6 @@ my $bash_prof = join '/', '/Users', $whoami, '.bash_profile';
 
 print $bash_prof;
 open (my $BASHPROF, '>>', $bash_prof) || die "you don't have rights to write on this file";
+
 print $BASHPROF 'export PATH=~/bin:$PATH';
+print $BASHPROF 'export P4PORT=10.127.22.43:1666';
