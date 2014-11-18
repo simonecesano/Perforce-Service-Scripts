@@ -22,3 +22,4 @@ open (my $BASHPROF, '>>', $bash_prof) || die "you don't have rights to write on 
 
 print $BASHPROF 'export PATH=~/bin:$PATH';
 print $BASHPROF 'export P4PORT=10.127.22.43:1666';
+qx/source "$bash_prof"/;
