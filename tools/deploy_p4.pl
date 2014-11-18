@@ -17,5 +17,9 @@ print $p4_file;
 qx|curl "http://cdist2.perforce.com/perforce/r14.2/bin.macosx105x86/p4" > "$p4_file"|;
 qx|chmod +x "$p4_file"|;
 
-open my $BASHPROF, '>>', '~/.bash_profile';
+
+my $bash_prof = join '/', '/Users', $whoami, '.bash_profile';
+
+print $bash_prof;
+open (my $BASHPROF, '>>', $bash_prof) || die "you don't have rights to write on this file";
 print $BASHPROF 'export PATH=~/bin:$PATH';
