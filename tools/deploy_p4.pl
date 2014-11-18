@@ -17,5 +17,5 @@ print $p4_file;
 qx|curl "http://cdist2.perforce.com/perforce/r14.2/bin.macosx105x86/p4" > "$p4_file"|;
 qx|chmod +x "$p4_file"|;
 
-open 'BASHPROF' '>>', '~/.bash_profile';
-print BASHPROF 'export PATH=~/bin:$PATH';
+open $BASHPROF '>>', '~/.bash_profile';
+print $BASHPROF 'export PATH=~/bin:$PATH';
