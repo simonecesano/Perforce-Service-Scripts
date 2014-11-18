@@ -23,3 +23,5 @@ my $bin = $FindBin::Bin;
 my $outfile = join '/', $bin, '../zips', $zipfile;
 chdir $service_folder;
 qx/zip -r "$outfile" "$service"/;
+
+# https://github.com/simonecesano/Perforce-Service-Scripts/raw/master/zips/login_to_desi.zip
