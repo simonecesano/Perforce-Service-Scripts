@@ -14,7 +14,7 @@ This project aims at building scripts and tools can be used to make life with Pe
 How it works
 ------------
 
-the standard process starts with downloading a bash/perl/something script that typically downloads further files, and
+The standard process starts with downloading a bash/perl/something script that typically downloads further files, and
 places them in the right place on the user's home directory.
 
 It works because executable can sit in the user's home directory, as long as -bash_profile is updated, or because
@@ -52,7 +52,7 @@ looks like this:
 
      tell application "Automator"
 	     set f to open alias POSIX file "/Users/myhome/Desktop/foo.workflow"
-	     save f as "Application" in POSIX file "/myhome/cesansim/Desktop/foo.app"
+	     save f as "Application" in POSIX file "/Users/myhome/Desktop/foo.app"
 	     quit
      end tell
 
