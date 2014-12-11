@@ -36,8 +36,8 @@ Services
 --------
 
 Once a workflow is created and debugged, it can be converted to a service. Services let the user quickly preform actions that
-usually require launching additional programs and taking many steps, that usually are available through the application menu
-- for example in PowerPoint it's the third item in the PowerPoint menu. A good explanation of services is found
+usually require launching additional programs and taking many steps, that usually are available through the application
+menu - for example in PowerPoint it's the third item in the PowerPoint menu. A good explanation of services is found
 [here](http://www.macworld.com/article/1163996/how_to_use_services_in_mac_os_x.html).
 
 Applications
