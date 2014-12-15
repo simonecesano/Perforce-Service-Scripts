@@ -46,7 +46,7 @@ if (-f $bash_prof) {
     @bash = <$BASHPROF>;
 };
 
-open ($BASHPROF, '>>', $bash_prof) || die "you don't have rights to write on this file";
+open (my $BASHPROF, '>>', $bash_prof) || die "you don't have rights to write on this file";
 my @bash_edits = (
 		  'export PATH=~/bin:$PATH',
 		  'export P4PORT=10.127.22.43:1666'
