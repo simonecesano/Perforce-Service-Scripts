@@ -55,7 +55,7 @@ my $now = qx/date/;
 for (@bash_edits) {
     my $re = quotemeta($_);
     next if grep { /$re/ } @bash;
-    printf $BASHPROF, "#### edited on %s by p4 install script ####\n", $date;
+    printf $BASHPROF, "#### edited on %s by p4 install script ####\n", $now;
     print $BASHPROF $_
 }
 qx/source "$bash_prof"/;
