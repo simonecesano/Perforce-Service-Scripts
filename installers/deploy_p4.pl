@@ -41,21 +41,18 @@ my $bash_prof = join '/', '/Users', $whoami, '.bash_profile';
 my @bash;
 
 print $bash_prof;
-if (-f $bash_prof) {
-    open my $BASHPROF, $bash_prof;
-    @bash = <$BASHPROF>;
-};
+if (-f $bash_prof) { open my $BASHPROF, $bash_prof; @bash = <$BASHPROF> };
 
 open (my $BASHPROF, '>>', $bash_prof) || die "you don't have rights to write on this file";
 my @bash_edits = (
 		  'export PATH=~/bin:$PATH',
 		  'export P4PORT=10.127.22.43:1666'
 		  );
-my $now = qx/date/;
+my $now = qx/date/; $now =~ s/\s$//;
 for (@bash_edits) {
     my $re = quotemeta($_);
     next if grep { /$re/ } @bash;
-    printf $BASHPROF, "#### edited on %s by p4 install script ####\n", $now;
+    printf $BASHPROF "#### added on %s by p4 install script ####\n", $now;
     print $BASHPROF $_
 }
 qx/source "$bash_prof"/;
