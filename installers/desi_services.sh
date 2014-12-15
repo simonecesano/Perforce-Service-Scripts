@@ -18,7 +18,7 @@ tmpfile=$tmpfile".zip";
 #--------------------------------------------------
 # install create desi folder
 #--------------------------------------------------
-curl -sS -L https://github.com/simonecesano/Perforce-Service-Scripts/raw/master/zips/create_desi_folder.zip -o $tmpfile
+curl -L https://github.com/simonecesano/Perforce-Service-Scripts/raw/master/zips/create_desi_folder.zip -o $tmpfile
 cd $srvdir
 unzip -u $tmpfile
 rm $tmpfile
@@ -26,7 +26,7 @@ rm $tmpfile
 #--------------------------------------------------
 # install upload to desi
 #--------------------------------------------------
-curl -sS -L https://github.com/simonecesano/Perforce-Service-Scripts/raw/master/zips/upload_files_to_desi.zip -o $tmpfile
+curl -L https://github.com/simonecesano/Perforce-Service-Scripts/raw/master/zips/upload_files_to_desi.zip -o $tmpfile
 cd $srvdir
 unzip -u $tmpfile
 rm $tmpfile
